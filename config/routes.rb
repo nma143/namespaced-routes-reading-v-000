@@ -12,10 +12,13 @@ Rails.application.routes.draw do
   #   resources :stats, only: [:index]
   # end
 
-  scope '/admin', module: 'admin' do
+  # scope '/admin', module: 'admin' do
+  #   resources :stats, only: [:index]
+  # end
+
+  namespace :admin do
     resources :stats, only: [:index]
   end
-
 
 
 end
